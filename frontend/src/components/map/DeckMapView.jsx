@@ -62,9 +62,9 @@ const ESRI_SATELLITE_STYLE = {
 };
 
 const INITIAL_VIEW = {
-  longitude:  32.336,
-  latitude:   41.634,
-  zoom:       16.5,
+  longitude:  28.9485,
+  latitude:   41.0295,
+  zoom:       17,
   pitch:      0,
   bearing:    0,
 };
@@ -363,9 +363,10 @@ export default function DeckMapView() {
     }
   }, [viewState.latitude, viewState.longitude, viewState.zoom, inputLat, inputLon, hasEdits, resetWorkspace, setError]);
 
-  // İlk açılışta mevcut bölgenin bina ve yol poligonlarını anında yükle
+  // İlk açılışta Fatih / Balat bölgesini analiz edip bina ve yolları yükle
   useEffect(() => {
-    editor.openRegion('bartin');
+    setActiveRegionName('FATİH / BALAT');
+    handleAnalyze({ lat: INITIAL_VIEW.latitude, lon: INITIAL_VIEW.longitude, zoom: INITIAL_VIEW.zoom });
     return () => {
       if (aiAbortRef.current) aiAbortRef.current.abort();
     };

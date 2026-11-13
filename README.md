@@ -16,40 +16,48 @@ bir web uygulamasıdır.
 
 ## Gereksinimler
 
-- **Python 3.10+** — <https://www.python.org/downloads/> (kurulumda *Add Python to PATH* seçilmeli)
-- **Node.js 18+** — <https://nodejs.org/> (LTS sürümü)
+- **Python 3.11+** — <https://www.python.org/downloads/> (kurulumda *Add Python to PATH* seçilmeli; Python 3.12 önerilir)
+- **Node.js 22.12+** — <https://nodejs.org/> (Node.js 24 de kullanılabilir)
 - İnternet bağlantısı (uydu görüntüsü, OSM ve yapay zekâ servisi için)
 
-API anahtarları `backend/.env` ve `frontend/.env` dosyalarında hazır olarak bulunur.
+API anahtarları GitHub deposuna eklenmez. Çalıştırmadan önce `backend/.env` içinde
+`MAPBOX_ACCESS_TOKEN` ve `ROBOFLOW_API_KEY`, `frontend/.env` içinde ise
+`VITE_MAPBOX_TOKEN` tanımlayın. Varsayılan bina tespiti Roboflow üzerinden yapılır;
+PyTorch kurulması gerekmez.
 
 ## Çalıştırma
 
-İki ayrı terminal gerekir; uygulama çalıştığı sürece ikisi de açık kalmalıdır.
+Önce ZIP dosyasını bir klasöre tamamen çıkarın. ZIP içinden çalıştırmayın.
+
+Windows'ta proje ana klasöründe iki ayrı terminal açın; uygulama çalıştığı sürece
+ikisi de açık kalmalıdır. Başka bilgisayardan gelen `.venv` veya `node_modules`
+klasörlerini kullanmak yerine bağımlılıkları o bilgisayarda kurun.
 
 **1. terminal — backend**
 
-```bash
+```powershell
 python -m venv .venv
-# Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
-pip install -r backend/requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
 cd backend
-uvicorn api:app --port 8000
+..\.venv\Scripts\python.exe -m uvicorn api:app --port 8000
 ```
 
 **2. terminal — frontend**
 
-```bash
+```powershell
 cd frontend
-npm install
-npm run dev
+npm.cmd ci
+npm.cmd run dev
 ```
 
-Uygulama tarayıcıda <http://localhost:5173> adresinde açılır. Paket kurulumu (`pip install`,
-`npm install`) yalnızca ilk çalıştırmada gereklidir.
+Uygulama tarayıcıda <http://localhost:5173> adresinde açılır. Ortam oluşturma ve
+paket kurulumları yalnızca ilk çalıştırmada gereklidir. macOS/Linux'ta ortamı
+`source .venv/bin/activate` ile etkinleştirin; backend için `python -m pip` ve
+`python -m uvicorn`, frontend için `npm ci` ve `npm run dev` kullanın.
 
 ## Kullanım
 
-1. Açılışta kayıtlı **Bartın Merkez** çalışma alanı yüklenir.
+1. Açılışta **Fatih / Balat** bölgesi analiz edilerek yüklenir.
 2. Sol panelden yer arayabilir, koordinat girebilir veya hazır bölgelerden birini
    seçebilirsiniz. Seçilen bölgede önce OSM binaları ve yollar hemen çizilir, ardından
    uydu görüntüsü yapay zekâ ile taranır ve eksik binalar eklenir (~15–30 sn).
@@ -83,6 +91,8 @@ frontend/                   React + Vite + deck.gl arayüzü
 
 ## Testler
 
+Her komut grubunu proje ana klasöründen açılmış ayrı bir terminalde çalıştırın.
+
 ```bash
 cd backend && python -m unittest discover -p "test_*.py"
 cd frontend && npm test
@@ -96,3 +106,18 @@ model eğitimi için ek paketler gerekir:
 ```bash
 pip install -r backend/requirements-ml.txt
 ```
+
+## Gönderilecek dosyalar ve bağlantı gereksinimi
+
+ZIP içinde `backend/` (kayıtlı çalışma alanları için `data/` dahil), `frontend/`,
+`README.md` bulunmalıdır. `frontend/package.json` ve `frontend/package-lock.json`
+dosyalarının ZIP'e eklendiğini kontrol edin. Mevcut anahtarlarla özel paylaşım
+yapılacaksa iki `.env` dosyasını ayrıca ekleyin; bu dosyalar GitHub'da bulunmaz.
+Anahtarlarla yapılan istekler anahtar sahibinin servis kotasını kullanır.
+`.git`, `.venv`, `node_modules`, `__pycache__` ve
+`frontend/dist` kurulum için gerekli değildir.
+
+Mapbox ve Roboflow özellikleri geçerli API anahtarları, servis kotası ve internet
+erişimi gerektirir. Anahtarların dosyada bulunması servislerin erişilebilirliğini
+garanti etmez. Harita açılmazsa önce iki terminaldeki hata mesajlarını kontrol edin.
+8000 veya 5173 portu doluysa önce bu portu kullanan eski uygulama oturumunu kapatın.
