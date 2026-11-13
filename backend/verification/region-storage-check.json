@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-01T17:50:20.799119+00:00",
+  "region": "bartin",
+  "revision": 1,
+  "buildings": 511,
+  "roads": 663,
+  "hash_before_restart": "c37088387ddb680cd4358faf5c55f5d159634a68c14209f2baf3700b6381a50e",
+  "hash_after_restart": "c37088387ddb680cd4358faf5c55f5d159634a68c14209f2baf3700b6381a50e",
+  "restart_preserved_data": true,
+  "saved_region_request_seconds": 0.1131,
+  "coverage_reviewed": false,
+  "simulation_ready": false,
+  "browser_visual_check": "not_run_browser_host_unavailable"
+}

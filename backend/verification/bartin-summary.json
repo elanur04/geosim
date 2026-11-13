@@ -1,0 +1,13 @@
+{
+  "bounds": {
+    "south": 41.626,
+    "west": 32.324,
+    "north": 41.642,
+    "east": 32.348
+  },
+  "buildings": 511,
+  "roads": 663,
+  "error": null,
+  "osm_timestamp": "2026-11-01T17:36:36Z",
+  "coverage_verified": false
+}

@@ -1,0 +1,34 @@
+{
+  "case": "bartin-center",
+  "baseline_run_id": "20261101T180519_8dcf47b6ff0b",
+  "fixed_image_sha256": "698b0fef535cbcee3ff8a8df7600a753e711c33d9336a89997fcf3c9368129e1",
+  "runs": [
+    {
+      "threshold": 0.25,
+      "analysis_run_id": "20261101T180519_8dcf47b6ff0b",
+      "status": "complete"
+    },
+    {
+      "threshold": 0.4,
+      "analysis_run_id": "20261101T181520_fbd0b63d7169",
+      "status": "complete",
+      "ai_buildings": 237,
+      "hybrid_buildings": 401,
+      "inference_seconds": 4.365,
+      "failed_tiles": 0,
+      "f1": null
+    },
+    {
+      "threshold": 0.6,
+      "analysis_run_id": "20261101T181522_86c1cb53f432",
+      "status": "complete",
+      "ai_buildings": 150,
+      "hybrid_buildings": 350,
+      "inference_seconds": 1.526,
+      "failed_tiles": 0,
+      "f1": null
+    }
+  ],
+  "best_threshold": null,
+  "selection_status": "awaiting_independent_manual_reference"
+}

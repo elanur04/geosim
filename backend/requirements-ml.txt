@@ -1,0 +1,7 @@
+# İsteğe bağlı: yerel bina modelleri (GeoAI Mask R-CNN, YOLOv8-seg) ve model eğitimi için.
+# Uygulamanın varsayılan çalışması (Roboflow) bu paketleri gerektirmez.
+# Kurulum: pip install -r requirements-ml.txt
+
+torch
+torchvision
+ultralytics

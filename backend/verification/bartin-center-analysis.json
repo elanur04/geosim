@@ -1,0 +1,55 @@
+{
+  "case": "bartin-center",
+  "analysis_run_id": "20261101T180519_8dcf47b6ff0b",
+  "status": "complete",
+  "request": {
+    "latitude": 41.6374,
+    "longitude": 32.3381,
+    "zoom": 17.0,
+    "confidence": 0.25,
+    "include_ai": true
+  },
+  "bounds": {
+    "north": 41.6399658,
+    "south": 41.6348341,
+    "east": 32.3415332,
+    "west": 32.3346668,
+    "polygon": [
+      [
+        32.3346668,
+        41.6399658
+      ],
+      [
+        32.3415332,
+        41.6399658
+      ],
+      [
+        32.3415332,
+        41.6348341
+      ],
+      [
+        32.3346668,
+        41.6348341
+      ],
+      [
+        32.3346668,
+        41.6399658
+      ]
+    ]
+  },
+  "model_id": "buildings-instance-segmentation/3",
+  "osm_buildings": 299,
+  "osm_layer_source": "original_osm",
+  "osm_from_snapshot": true,
+  "ai_buildings": 323,
+  "hybrid_buildings": 408,
+  "roads": 65,
+  "tiles": 25,
+  "failed_tiles": 0,
+  "request_seconds": 7.523,
+  "reference_status": "missing",
+  "f1": null,
+  "five_point_target_verified": false,
+  "errors": {},
+  "warnings": {}
+}
