@@ -163,7 +163,7 @@ def pixel_to_geo_bbox(
 # 9.665 görselle eğitilmiş Instance Segmentation Modeli (.env'den okunur)
 ROBOFLOW_API_URL  = os.getenv("ROBOFLOW_API_URL", "https://serverless.roboflow.com")
 ROBOFLOW_API_KEY  = os.getenv("ROBOFLOW_API_KEY", "")
-ROBOFLOW_MODEL_ID = os.getenv("ROBOFLOW_MODEL_ID", "buildings-instance-segmentation/3")
+ROBOFLOW_MODEL_ID = os.getenv("ROBOFLOW_MODEL_ID", "buildings-instance-segmentation-qbvjo/1")
 
 
 def box_iou(b1: tuple, b2: tuple) -> float:
