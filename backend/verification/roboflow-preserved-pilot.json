@@ -1,0 +1,17 @@
+{
+  "source_run_id": "20261101T180519_8dcf47b6ff0b",
+  "runs": [
+    {
+      "provider": "roboflow",
+      "confidence": 0.25,
+      "run_id": "20261104T182547_6e013c0d5bfa",
+      "status": "complete",
+      "ai_count": 369,
+      "seconds": 1.252,
+      "mode": "replay",
+      "f1": null
+    }
+  ],
+  "winner": null,
+  "selection_status": "requires_independent_development_reference"
+}

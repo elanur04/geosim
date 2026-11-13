@@ -1,0 +1,12 @@
+{
+  "provider": "geoai",
+  "repo_id": "giswqs/geoai",
+  "revision": "aa2b25d27b2c78f0e92c7b6a4813a571f9bc2288",
+  "filename": "building_footprints_usa.pth",
+  "url": "https://huggingface.co/giswqs/geoai/resolve/aa2b25d27b2c78f0e92c7b6a4813a571f9bc2288/building_footprints_usa.pth",
+  "sha256": "3aea5d0da7803be31ff4e2e1e5ac747f15cab2a13d6bb1a9319b6a6ba8bc7bca",
+  "license": "MIT (model repository)",
+  "input": "RGB",
+  "architecture": "torchvision maskrcnn_resnet50_fpn, num_classes=2",
+  "local_accuracy_measured": false
+}

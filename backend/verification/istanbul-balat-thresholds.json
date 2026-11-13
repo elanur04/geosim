@@ -1,0 +1,34 @@
+{
+  "case": "istanbul-balat",
+  "baseline_run_id": "20261101T180546_8945d0dae9af",
+  "fixed_image_sha256": "85545a205d00da60c11afce54ba2cee45f7cc39ac890c644feb8cf23aa78bfe3",
+  "runs": [
+    {
+      "threshold": 0.25,
+      "analysis_run_id": "20261101T180546_8945d0dae9af",
+      "status": "complete"
+    },
+    {
+      "threshold": 0.4,
+      "analysis_run_id": "20261101T181531_716f61f3f021",
+      "status": "complete",
+      "ai_buildings": 435,
+      "hybrid_buildings": 1391,
+      "inference_seconds": 2.987,
+      "failed_tiles": 0,
+      "f1": null
+    },
+    {
+      "threshold": 0.6,
+      "analysis_run_id": "20261101T181534_7965516cd519",
+      "status": "complete",
+      "ai_buildings": 295,
+      "hybrid_buildings": 1372,
+      "inference_seconds": 2.009,
+      "failed_tiles": 0,
+      "f1": null
+    }
+  ],
+  "best_threshold": null,
+  "selection_status": "awaiting_independent_manual_reference"
+}

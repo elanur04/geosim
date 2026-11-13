@@ -1,0 +1,233 @@
+{
+  "cases": [
+    {
+      "case": "bartin-center",
+      "runs": [
+        {
+          "run_id": "20261101T180519_8dcf47b6ff0b",
+          "threshold": 0.25,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 299,
+              "valid_closed_buildings": 299,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 323,
+              "valid_closed_buildings": 323,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 408,
+              "valid_closed_buildings": 408,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        },
+        {
+          "run_id": "20261101T181520_fbd0b63d7169",
+          "threshold": 0.4,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 299,
+              "valid_closed_buildings": 299,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 237,
+              "valid_closed_buildings": 237,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 401,
+              "valid_closed_buildings": 401,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        },
+        {
+          "run_id": "20261101T181522_86c1cb53f432",
+          "threshold": 0.6,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 299,
+              "valid_closed_buildings": 299,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 150,
+              "valid_closed_buildings": 150,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 350,
+              "valid_closed_buildings": 350,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        }
+      ],
+      "reference_status": "not_supplied_to_this_audit"
+    },
+    {
+      "case": "bartin-campus",
+      "runs": [
+        {
+          "run_id": "20261101T180534_743efa76456f",
+          "threshold": 0.25,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 71,
+              "valid_closed_buildings": 71,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 45,
+              "valid_closed_buildings": 45,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 79,
+              "valid_closed_buildings": 79,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        },
+        {
+          "run_id": "20261101T181524_8a5c8f34bede",
+          "threshold": 0.4,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 71,
+              "valid_closed_buildings": 71,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 27,
+              "valid_closed_buildings": 27,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 77,
+              "valid_closed_buildings": 77,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        },
+        {
+          "run_id": "20261101T181527_d8b1c884f398",
+          "threshold": 0.6,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 71,
+              "valid_closed_buildings": 71,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 17,
+              "valid_closed_buildings": 17,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 72,
+              "valid_closed_buildings": 72,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        }
+      ],
+      "reference_status": "not_supplied_to_this_audit"
+    },
+    {
+      "case": "istanbul-balat",
+      "runs": [
+        {
+          "run_id": "20261101T180546_8945d0dae9af",
+          "threshold": 0.25,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 1346,
+              "valid_closed_buildings": 1346,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 632,
+              "valid_closed_buildings": 632,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 1405,
+              "valid_closed_buildings": 1405,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        },
+        {
+          "run_id": "20261101T181531_716f61f3f021",
+          "threshold": 0.4,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 1346,
+              "valid_closed_buildings": 1346,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 435,
+              "valid_closed_buildings": 435,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 1391,
+              "valid_closed_buildings": 1391,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        },
+        {
+          "run_id": "20261101T181534_7965516cd519",
+          "threshold": 0.6,
+          "tiles": 25,
+          "input_integrity_verified": true,
+          "geometry": {
+            "osm": {
+              "buildings": 1346,
+              "valid_closed_buildings": 1346,
+              "valid_closed_ratio": 1.0
+            },
+            "ai": {
+              "buildings": 295,
+              "valid_closed_buildings": 295,
+              "valid_closed_ratio": 1.0
+            },
+            "hybrid": {
+              "buildings": 1372,
+              "valid_closed_buildings": 1372,
+              "valid_closed_ratio": 1.0
+            }
+          }
+        }
+      ],
+      "reference_status": "not_supplied_to_this_audit"
+    }
+  ],
+  "complete_experiments": 9,
+  "input_integrity_verified": true,
+  "f1_target_verified": false,
+  "note": "Polygon validity and data integrity do not establish detection precision or recall."
+}

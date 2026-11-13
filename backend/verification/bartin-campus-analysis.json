@@ -1,0 +1,57 @@
+{
+  "case": "bartin-campus",
+  "analysis_run_id": "20261101T180534_743efa76456f",
+  "status": "complete",
+  "request": {
+    "latitude": 41.5518,
+    "longitude": 32.2931,
+    "zoom": 16.5,
+    "confidence": 0.25,
+    "include_ai": true
+  },
+  "bounds": {
+    "north": 41.5554334,
+    "south": 41.5481664,
+    "east": 32.2979553,
+    "west": 32.2882447,
+    "polygon": [
+      [
+        32.2882447,
+        41.5554334
+      ],
+      [
+        32.2979553,
+        41.5554334
+      ],
+      [
+        32.2979553,
+        41.5481664
+      ],
+      [
+        32.2882447,
+        41.5481664
+      ],
+      [
+        32.2882447,
+        41.5554334
+      ]
+    ]
+  },
+  "model_id": "buildings-instance-segmentation/3",
+  "osm_buildings": 71,
+  "osm_layer_source": "mapbox_mvt",
+  "osm_from_snapshot": false,
+  "ai_buildings": 45,
+  "hybrid_buildings": 79,
+  "roads": 103,
+  "tiles": 25,
+  "failed_tiles": 0,
+  "request_seconds": 5.76,
+  "reference_status": "missing",
+  "f1": null,
+  "five_point_target_verified": false,
+  "errors": {},
+  "warnings": {
+    "original_osm": "https://overpass.private.coffee/api/interpreter: SSLError; https://overpass-api.de/api/interpreter: HTTPError"
+  }
+}

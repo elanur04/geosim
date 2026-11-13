@@ -1,0 +1,57 @@
+{
+  "case": "istanbul-balat",
+  "analysis_run_id": "20261101T180546_8945d0dae9af",
+  "status": "complete",
+  "request": {
+    "latitude": 41.0295,
+    "longitude": 28.9485,
+    "zoom": 17.0,
+    "confidence": 0.25,
+    "include_ai": true
+  },
+  "bounds": {
+    "north": 41.0320899,
+    "south": 41.02691,
+    "east": 28.9519332,
+    "west": 28.9450668,
+    "polygon": [
+      [
+        28.9450668,
+        41.0320899
+      ],
+      [
+        28.9519332,
+        41.0320899
+      ],
+      [
+        28.9519332,
+        41.02691
+      ],
+      [
+        28.9450668,
+        41.02691
+      ],
+      [
+        28.9450668,
+        41.0320899
+      ]
+    ]
+  },
+  "model_id": "buildings-instance-segmentation/3",
+  "osm_buildings": 1346,
+  "osm_layer_source": "mapbox_mvt",
+  "osm_from_snapshot": false,
+  "ai_buildings": 632,
+  "hybrid_buildings": 1405,
+  "roads": 196,
+  "tiles": 25,
+  "failed_tiles": 0,
+  "request_seconds": 10.731,
+  "reference_status": "missing",
+  "f1": null,
+  "five_point_target_verified": false,
+  "errors": {},
+  "warnings": {
+    "original_osm": "https://overpass.private.coffee/api/interpreter: ReadTimeout; https://overpass-api.de/api/interpreter: HTTPError"
+  }
+}

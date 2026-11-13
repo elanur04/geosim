@@ -1,0 +1,17 @@
+{
+  "source_run_id": "20261101T180519_8dcf47b6ff0b",
+  "runs": [
+    {
+      "provider": "geoai",
+      "confidence": 0.25,
+      "run_id": "20261104T182507_bb75f01f5ea2",
+      "status": "complete",
+      "ai_count": 318,
+      "seconds": 6.447,
+      "mode": "model_call",
+      "f1": null
+    }
+  ],
+  "winner": null,
+  "selection_status": "requires_independent_development_reference"
+}

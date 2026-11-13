@@ -1,0 +1,37 @@
+{
+  "note": "F1 değildir; özgün OSM binalarının bulunma oranıdır.",
+  "runs": [
+    {
+      "analysis_run_id": "20261104T182547_6e013c0d5bfa",
+      "model_id": "buildings-instance-segmentation/3",
+      "confidence": 0.25,
+      "original_osm_buildings": 95,
+      "iou_0.5": {
+        "found": 55,
+        "missed": 40,
+        "found_ratio": 0.5789473684210527
+      },
+      "iou_0.3": {
+        "found": 73,
+        "missed": 22,
+        "found_ratio": 0.7684210526315789
+      }
+    },
+    {
+      "analysis_run_id": "20261104T182507_bb75f01f5ea2",
+      "model_id": "geoai/building_footprints_usa.pth",
+      "confidence": 0.25,
+      "original_osm_buildings": 95,
+      "iou_0.5": {
+        "found": 31,
+        "missed": 64,
+        "found_ratio": 0.3263157894736842
+      },
+      "iou_0.3": {
+        "found": 43,
+        "missed": 52,
+        "found_ratio": 0.45263157894736844
+      }
+    }
+  ]
+}

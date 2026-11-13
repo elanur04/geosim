@@ -31,6 +31,7 @@ __pycache__/
 *.pt
 *.pth
 *.onnx
+backend/data/
 *.jpg
 *.jpeg
 *.png
@@ -44,3 +45,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+# Local model downloads and training outputs
+*.download
+backend/runs/
+backend/models/*.onnx.data
