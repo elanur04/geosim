@@ -1,5 +1,10 @@
 # GeoSim — Kentsel Dijital İkiz ve Trafik Simülasyonu
 
+> **EN:** GeoSim builds an editable digital twin of any selected urban area by merging
+> OpenStreetMap buildings and roads with AI-based building detection on Mapbox satellite
+> imagery, then runs a microscopic traffic simulation (IDM + Dijkstra) on top of it in the
+> browser. Stack: Python, FastAPI, OpenCV, Shapely, React, Vite, deck.gl, Mapbox GL.
+
 GeoSim, seçilen bir bölgenin bina ve yol ağını çıkarıp harita üzerinde düzenlenebilir
 bir dijital ikiz oluşturan ve bu ağ üzerinde mikroskobik trafik simülasyonu çalıştıran
 bir web uygulamasıdır.
@@ -27,11 +32,15 @@ PyTorch kurulması gerekmez.
 
 ## Çalıştırma
 
-Önce ZIP dosyasını bir klasöre tamamen çıkarın. ZIP içinden çalıştırmayın.
+Depoyu klonlayın:
 
-Windows'ta proje ana klasöründe iki ayrı terminal açın; uygulama çalıştığı sürece
-ikisi de açık kalmalıdır. Başka bilgisayardan gelen `.venv` veya `node_modules`
-klasörlerini kullanmak yerine bağımlılıkları o bilgisayarda kurun.
+```bash
+git clone https://github.com/elanur04/geosim.git
+cd geosim
+```
+
+Proje ana klasöründe iki ayrı terminal açın; uygulama çalıştığı sürece ikisi de açık
+kalmalıdır. Aşağıdaki komutlar Windows içindir; macOS/Linux notu bölümün sonundadır.
 
 **1. terminal — backend**
 
@@ -107,17 +116,8 @@ model eğitimi için ek paketler gerekir:
 pip install -r backend/requirements-ml.txt
 ```
 
-## Gönderilecek dosyalar ve bağlantı gereksinimi
-
-ZIP içinde `backend/` (kayıtlı çalışma alanları için `data/` dahil), `frontend/`,
-`README.md` bulunmalıdır. `frontend/package.json` ve `frontend/package-lock.json`
-dosyalarının ZIP'e eklendiğini kontrol edin. Mevcut anahtarlarla özel paylaşım
-yapılacaksa iki `.env` dosyasını ayrıca ekleyin; bu dosyalar GitHub'da bulunmaz.
-Anahtarlarla yapılan istekler anahtar sahibinin servis kotasını kullanır.
-`.git`, `.venv`, `node_modules`, `__pycache__` ve
-`frontend/dist` kurulum için gerekli değildir.
+## Bağlantı gereksinimi ve sorun giderme
 
 Mapbox ve Roboflow özellikleri geçerli API anahtarları, servis kotası ve internet
-erişimi gerektirir. Anahtarların dosyada bulunması servislerin erişilebilirliğini
-garanti etmez. Harita açılmazsa önce iki terminaldeki hata mesajlarını kontrol edin.
+erişimi gerektirir. Harita açılmazsa önce iki terminaldeki hata mesajlarını kontrol edin.
 8000 veya 5173 portu doluysa önce bu portu kullanan eski uygulama oturumunu kapatın.
