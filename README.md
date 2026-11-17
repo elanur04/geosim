@@ -19,11 +19,37 @@ bir web uygulamasıdır.
   kat sayısına göre talep üretimi. Üç senaryo karşılaştırılır: S0 mevcut ağ,
   S1 yol kapatma, S2 yeni bağlantı yolu. Simülasyon tarayıcıda Web Worker içinde çalışır.
 
+## Teknik odak
+
+- **Backend:** FastAPI uç noktaları, dış servis entegrasyonu, GeoJSON dönüşümü ve SQLite ile sürümlü kayıt.
+- **Algoritmalar:** Yol grafı, Dijkstra rotalama, IDM araç takibi ve ortak rastgele tohumlarla senaryo karşılaştırması.
+- **Frontend:** React, deck.gl katmanları, düzenleme/geri alma akışı ve Web Worker içinde simülasyon.
+- **Doğrulama:** Backend birim testleri; frontend simülasyon, koordinat ve düzenleme testleri. GitHub Actions bu testlerle lint ve production build kontrollerini çalıştırır.
+
+```mermaid
+flowchart LR
+    A[React + deck.gl] --> B[FastAPI]
+    B --> C[OSM / Mapbox]
+    B --> D[Roboflow]
+    B --> E[(SQLite)]
+    A --> F[Web Worker: graf + rota + IDM]
+```
+
 ## Gereksinimler
 
 - **Python 3.11+** — <https://www.python.org/downloads/> (kurulumda *Add Python to PATH* seçilmeli; Python 3.12 önerilir)
 - **Node.js 22.12+** — <https://nodejs.org/> (Node.js 24 de kullanılabilir)
 - İnternet bağlantısı (uydu görüntüsü, OSM ve yapay zekâ servisi için)
+
+İlk kurulumda örnek yapılandırmaları kopyalayın:
+
+```powershell
+Copy-Item backend/.env.example backend/.env
+Copy-Item frontend/.env.example frontend/.env
+```
+
+macOS/Linux üzerinde aynı işlem için `cp` kullanın. Mevcut `.env` dosyanız varsa üzerine yazmayın.
+Frontend'deki `VITE_BACKEND_URL` farklı bir backend adresi için değiştirilebilir; varsayılan `http://localhost:8000`.
 
 API anahtarları GitHub deposuna eklenmez. Çalıştırmadan önce `backend/.env` içinde
 `MAPBOX_ACCESS_TOKEN` ve `ROBOFLOW_API_KEY`, `frontend/.env` içinde ise
@@ -103,8 +129,10 @@ frontend/                   React + Vite + deck.gl arayüzü
 Her komut grubunu proje ana klasöründen açılmış ayrı bir terminalde çalıştırın.
 
 ```bash
-cd backend && python -m unittest discover -p "test_*.py"
-cd frontend && npm test
+python -m unittest discover -s backend -p "test_*.py"
+npm --prefix frontend test
+npm --prefix frontend run lint
+npm --prefix frontend run build
 ```
 
 ## İsteğe bağlı: yerel modeller
@@ -121,3 +149,11 @@ pip install -r backend/requirements-ml.txt
 Mapbox ve Roboflow özellikleri geçerli API anahtarları, servis kotası ve internet
 erişimi gerektirir. Harita açılmazsa önce iki terminaldeki hata mesajlarını kontrol edin.
 8000 veya 5173 portu doluysa önce bu portu kullanan eski uygulama oturumunu kapatın.
+
+## Bilinen sınırlar
+
+- Araştırma/eğitim prototipidir; trafik modeli gerçek trafik sayımlarıyla kalibre edilmemiştir.
+- OSM kapsamı ve bina tespit başarısı bölgeye göre değişir. `backend/verification/` deney kayıtları, bağımsız ve tüm bölgelere genellenebilir bir doğruluk garantisi değildir.
+- Ana harita ve analiz için servis anahtarları gerekir; birim testleri canlı servis anahtarı gerektirmez.
+- API'de kullanıcı kimlik doğrulaması yoktur ve CORS geniş açıktır. Genel internete açılmadan önce erişim denetimi ve izin verilen origin listesi düzenlenmelidir.
+- Mapbox ve harita kitaplıkları büyük bir frontend paketi üretir; yavaş bağlantılar için yükleme performansı ayrıca ölçülmelidir.

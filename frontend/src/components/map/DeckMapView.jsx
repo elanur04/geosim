@@ -14,7 +14,7 @@ import useRegionWorkspace from './useRegionWorkspace';
 import RegionEditor from './RegionEditor';
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || 'TODO_MAPBOX_TOKEN_BURAYA';
-const BACKEND_URL  = 'http://localhost:8000';
+const BACKEND_URL  = (import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000').replace(/\/+$/, '');
 
 // Bina tespitinde kullanılan model ve güven eşiği
 const MODEL_PROVIDER   = 'roboflow';
@@ -41,7 +41,7 @@ const toCss = ([r, g, b]) => `rgb(${r}, ${g}, ${b})`;
 function friendlyError(message) {
   if (!message) return '';
   if (/failed to fetch|networkerror|load failed/i.test(message)) {
-    return 'Sunucuya bağlanılamadı. Backend\'in çalıştığından emin olun (http://localhost:8000).';
+    return `Sunucuya bağlanılamadı. Backend'in çalıştığından emin olun (${BACKEND_URL}).`;
   }
   return message;
 }
@@ -715,14 +715,14 @@ export default function DeckMapView() {
 
   return (
     <div className="hud-font" style={{ width: '100vw', height: '100vh', position: 'relative', backgroundColor: '#050914', overflow: 'hidden' }}>
-      
+
       {/* ── CSS Stilleri ── */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
-        
+
         .hud-font { font-family: 'Rajdhani', sans-serif; }
         .mono-font { font-family: 'Share Tech Mono', monospace; }
-        
+
         .hud-panel {
           background: rgba(10, 15, 25, 0.78);
           backdrop-filter: blur(12px);
@@ -735,7 +735,7 @@ export default function DeckMapView() {
           border: 1px solid rgba(0, 255, 157, 0.25);
           box-shadow: 0 0 20px rgba(0, 255, 157, 0.08), inset 0 0 20px rgba(0, 255, 157, 0.05);
         }
-        
+
         .hud-title {
           color: #00FF9D;
           text-transform: uppercase;
@@ -752,7 +752,7 @@ export default function DeckMapView() {
           border-bottom: 1px solid rgba(0, 255, 157, 0.3);
           text-shadow: 0 0 8px rgba(0, 255, 157, 0.4);
         }
-        
+
         .cyber-button {
           background: rgba(0, 255, 157, 0.1);
           border: 1px solid #00FF9D;

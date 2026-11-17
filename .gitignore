@@ -50,3 +50,6 @@ ehthumbs.db
 *.download
 backend/runs/
 backend/models/*.onnx.data
+
+# Safe configuration templates
+!**/.env.example
